@@ -1,0 +1,23 @@
+{
+  "properties": [
+    {
+      "name": "wechat.accessTokenUrl",
+      "type": "java.lang.String",
+      "description": "Description for wechat.accessTokenUrl."
+    },
+    {
+      "name": "wechat.wxTemplateUrl",
+      "type": "java.lang.String",
+      "description": "Description for wechat.wxTemplateUrl."
+    },
+    {
+      "name": "wechat.appId",
+      "type": "java.lang.String",
+      "description": "Description for wechat.appId."
+    },
+    {
+      "name": "wechat.appSecret",
+      "type": "java.lang.String",
+      "description": "Description for wechat.appSecret."
+    }
+  ] }
