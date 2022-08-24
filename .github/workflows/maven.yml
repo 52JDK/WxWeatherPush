@@ -25,6 +25,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: run push
-      uses: ashley-taylor/junit-report-annotations-action@master
+    - uses: ashley-taylor/junit-report-annotations-action@master
       run: PushTest.java
