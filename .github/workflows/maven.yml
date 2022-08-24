@@ -21,5 +21,5 @@ jobs:
       - name: executing
         run:
           # 指定所要运行的shell
-         mvn compile exec:java -Dexec.mainClass="com.example.demo.DemoApplication.java"
+        mvn spring-boot:run
 
