@@ -1,0 +1,17 @@
+## 微信推送信息
+wechat:
+  accessTokenUrl: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+  wxTemplateUrl: https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=
+  appId: wx0653e55d5cc3159c
+  appSecret: ddb74de9346a5245255d23da61e393d4
+  toUser:
+  templateId:
+
+
+
+
+## 天气
+weather:
+  url: https://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=
+  region: 北京
+
