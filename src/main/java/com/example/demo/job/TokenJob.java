@@ -21,7 +21,7 @@ public class TokenJob {
     @Autowired
     private TokenServer tokenServer;
 
-    @Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "0 0 */4 * * ? ")
     public void refreshToken() {
         log.info("refresh token start !!!");
         tokenServer.doGetToken();

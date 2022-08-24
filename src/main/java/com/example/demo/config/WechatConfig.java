@@ -2,6 +2,7 @@ package com.example.demo.config;
 
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -30,4 +31,13 @@ public class WechatConfig {
 
     @Value("${weather.region}")
     public String weatherRegion;
+
+    @Value("${infor.loveDate}")
+    public String inforLoveDate;
+
+    @Value("${infor.birthday}")
+    public String birthday;
+
+    @Value("${tianApi}")
+    public String tianApi;
 }

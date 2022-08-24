@@ -2,6 +2,11 @@ package com.example.demo.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.example.demo.config.WechatConfig;
+import org.junit.runner.RunWith;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,14 +14,19 @@ import java.util.Map;
  * @author shenhao
  * @date 2022/8/24 19:44
  */
+@Component
 public class TianApiUtil {
+
+    @Resource
+    private WechatConfig wechatConfig;
 
     /**
      * 获取彩虹屁
+     *
      * @return
      */
-    public static String getCaiHongPi() {
-        String httpUrl = "http://api.tianapi.com/caihongpi/index?key=8babebeb012a120cf60029df547a70be";
+    public String getCaiHongPi() {
+        String httpUrl = "http://api.tianapi.com/caihongpi/index?key=" + wechatConfig.tianApi;
         String result = null;
         try {
             result = HttpUtil.sendPost(httpUrl, "");
@@ -32,10 +42,11 @@ public class TianApiUtil {
 
     /**
      * 获取英文优美句子
+     *
      * @return
      */
-    public static Map<String,String> getEnsentence() {
-        String httpUrl = "http://api.tianapi.com/ensentence/index?key=8babebeb012a120cf60029df547a70be";
+    public Map<String, String> getEnsentence() {
+        String httpUrl = "http://api.tianapi.com/ensentence/index?key=" + wechatConfig.tianApi;
         String result = null;
         try {
             result = HttpUtil.sendPost(httpUrl, "");
@@ -54,7 +65,4 @@ public class TianApiUtil {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(getEnsentence());
-    }
 }

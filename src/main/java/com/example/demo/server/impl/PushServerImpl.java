@@ -16,6 +16,7 @@ import com.example.demo.util.HttpUtil;
 import com.example.demo.util.TianApiUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+
 import javax.annotation.Resource;
 import java.util.List;
 
@@ -27,7 +28,23 @@ public class PushServerImpl implements PushServer {
     private TokenServer tokenServer;
     @Resource
     private WechatConfig wechatConfig;
+    @Resource
+    private TianApiUtil tianApiUtil;
 
+
+    /**
+     *         日期：{{date.DATA}}
+     *         天气：{{weather.DATA}}
+     *         当前温度：{{nowTem.DATA}}
+     *         最低温度：{{lowTem.DATA}}
+     *         最高温度：{{highTem.DATA}}
+     *         风速：{{wind.DATA}}
+     *         今天使我们恋爱的：{{loveDate.DATA}} 天
+     *         距离xx的生日还有：{{birthday.DATA}} 天
+     *         {{caihongpi.DATA}}
+     *         {{zhText.DATA}}
+     *         {{enText.DATA}}
+     */
 
     @Override
     public void weatherPush() {
@@ -50,18 +67,24 @@ public class PushServerImpl implements PushServer {
                 //风速
                 .wind(TemplateMsg.builder().value(weather.getWind()).color("#B95EA3").build())
                 //love 日期
-                .loveDate(TemplateMsg.builder().value("2022-03-01").color("#FFA500").build())
+                .loveDate(TemplateMsg.builder().value(DateUtil.calculationLoveDate(wechatConfig.inforLoveDate)).color("#FFA500").build())
                 //生日
-                .birthday(TemplateMsg.builder().value(DateUtil.calculationBirthday("2022-03-01")).color("#0081ff").build())
-                .zhText(TemplateMsg.builder().value(TianApiUtil.getEnsentence().get("zh")).color("#FA8072").build())
-                .enText(TemplateMsg.builder().value(TianApiUtil.getEnsentence().get("en")).color("#C71585").build())
+                .birthday(TemplateMsg.builder().value(DateUtil.calculationBirthday(wechatConfig.birthday)).color("#0081ff").build())
+                .caihongpi(TemplateMsg.builder().value(tianApiUtil.getCaiHongPi()).color("#BA8072").build())
+                .zhText(TemplateMsg.builder().value(tianApiUtil.getEnsentence().get("zh")).color("#FA8072").build())
+                .enText(TemplateMsg.builder().value(tianApiUtil.getEnsentence().get("en")).color("#C71585").build())
                 .build();
+
+
         MsgHead msgHead = new MsgHead();
         msgHead.setData(msgBody);
+        msgHead.setTemplate_id(wechatConfig.templateId);
+        msgHead.setTouser(wechatConfig.toUser);
         String data = JSONObject.toJSONString(msgHead);
         String url = wechatConfig.wxTemplateUrl + token;
         try {
             String result = HttpUtil.sendJson(url, data);
+            log.info("push result:{}", result);
         } catch (Exception e) {
             log.error("push weather msg error ", e);
         }
@@ -70,12 +93,12 @@ public class PushServerImpl implements PushServer {
     @Override
     public Weather getWeather() {
         try {
-            String url = "https://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=ios&city=%E5%8C%97%E4%BA%AC";
+            String url = wechatConfig.weatherUrl + wechatConfig.weatherRegion;
             String result = HttpUtil.sendGet(url);
             JSONObject jsonObject = JSON.parseObject(result);
             Integer code = jsonObject.getInteger("code");
             String msg = jsonObject.getString("msg");
-            log.info("url:{}",url);
+            log.info("url:{}", url);
             if (code != 0) {
                 throw new Exception("调用天气失败," + msg);
             }

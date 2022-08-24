@@ -2,6 +2,8 @@ package com.example.demo.util;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 
 /**
@@ -43,6 +45,14 @@ public class DateUtil {
             days = cBirth.get(Calendar.DAY_OF_YEAR) - cToday.get(Calendar.DAY_OF_YEAR);
         }
         return days;
+    }
+
+    public static int calculationLoveDate(String date){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate now = LocalDate.now();
+        System.out.println("now:"+now);
+        LocalDate startDate = LocalDate.parse(date,formatter);
+        return (int) startDate.until(now, ChronoUnit.DAYS);
     }
 
 }

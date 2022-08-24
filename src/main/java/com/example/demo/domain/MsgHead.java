@@ -10,9 +10,9 @@ import lombok.Data;
 public class MsgHead {
 
 
-    private String touser = "oXpbp5wG3cfidmqBPHr6KJCm3Xpc";
+    private String touser;
 
-    private String template_id ="8it93NOs0NQ4XrN6qY8DcoYM-sU9vKgomfScSsvK2OU";
+    private String template_id ;
 
     private String url = "http://weixin.qq.com/download";
 

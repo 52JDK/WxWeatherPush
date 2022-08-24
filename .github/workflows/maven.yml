@@ -3,6 +3,8 @@ name: CI
 
 # on是指这套工作流程的trigger条件，即在push时触发
 on: [push]
+  schedule:
+    - cron: '0 0 8 * * ? *'
 
 # jobs就是这套工作流程了
 jobs:
