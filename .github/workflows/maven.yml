@@ -1,29 +1,25 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# name指的是这套工作流程的名称，可以自定义
+name: CI
 
-name: Java CI with Maven
+# on是指这套工作流程的trigger条件，即在push时触发
+on: [push]
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+# jobs就是这套工作流程了
 jobs:
+
+  # build相当于<job_id>,可以自定义
   build:
 
+    # 指定该job_id下的运行环境
     runs-on: ubuntu-latest
 
+    # 制定运行步骤
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 8
-      uses: actions/setup-java@v3
-      with:
-        java-version: '8'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      # 先将仓库的代码checkout到环境中，github提供了checkout的方法，只需要我们加上这条即可
+      - uses: actions/checkout@v1
+      # 为接下来所执行的shell命名，可省略
+      - name: executing
+        run:
+          # 指定所要运行的shell
+          cat PushTest.java
 
-    - uses: ashley-taylor/junit-report-annotations-action@master
-      run: PushTest.java
