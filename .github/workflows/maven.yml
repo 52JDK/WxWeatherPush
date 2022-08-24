@@ -26,5 +26,5 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: run push
-      uses: actions/checkout@v1
+      uses: ashley-taylor/junit-report-annotations-action@master
       run: DemoApplication.java
