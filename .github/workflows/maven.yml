@@ -2,7 +2,11 @@
 name: CI
 
 # on是指这套工作流程的trigger条件，即在push时触发
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   schedule:
     - cron: '0 8 * * *'
 
