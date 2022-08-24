@@ -2,7 +2,7 @@
 name: CI
 
 # on是指这套工作流程的trigger条件，即在push时触发
-on: [push]
+on:
   schedule:
     - cron: '0 0 8 * * ? *'
 
@@ -24,4 +24,5 @@ jobs:
         run:
           # 指定所要运行的shell
           mvn -Dtest=PushTest#push -DskipTests=false test
+
 
