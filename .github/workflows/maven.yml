@@ -27,4 +27,4 @@ jobs:
 
     - name: run push
       uses: ashley-taylor/junit-report-annotations-action@master
-      run: DemoApplication.java
+      run: PushTest.java
