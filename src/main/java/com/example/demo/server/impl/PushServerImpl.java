@@ -15,12 +15,8 @@ import com.example.demo.util.DateUtil;
 import com.example.demo.util.HttpUtil;
 import com.example.demo.util.TianApiUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.Resource;
-import javax.xml.ws.WebEndpoint;
-import java.lang.reflect.Type;
 import java.util.List;
 
 @Component
