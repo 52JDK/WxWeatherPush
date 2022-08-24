@@ -70,11 +70,12 @@ public class PushServerImpl implements PushServer {
     @Override
     public Weather getWeather() {
         try {
-            String url = wechatConfig.weatherUrl + wechatConfig.weatherRegion;
+            String url = "https://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=ios&city=%E5%8C%97%E4%BA%AC";
             String result = HttpUtil.sendGet(url);
             JSONObject jsonObject = JSON.parseObject(result);
             Integer code = jsonObject.getInteger("code");
             String msg = jsonObject.getString("msg");
+            log.info("url:{}",url);
             if (code != 0) {
                 throw new Exception("调用天气失败," + msg);
             }
