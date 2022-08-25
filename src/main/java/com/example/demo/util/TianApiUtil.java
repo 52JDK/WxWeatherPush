@@ -10,8 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author shenhao
- * @date 2022/8/24 19:44
+ *
+ * @author 程序员小R
+ * @date 2022/8/24 16:17
  */
 @Component
 public class TianApiUtil {

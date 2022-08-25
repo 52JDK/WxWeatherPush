@@ -57,10 +57,21 @@
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661423929022-96046702-f64f-458a-9792-99588a9a1cc5.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
 
-- 观察控制台
+- 观察控制台,出现红框的 errcode:0 代表执行成功
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661431992440-6fa93746-6f93-4c3a-99bc-98b19cf69589.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
 
 4. github定时运行
+> 打不开github.com 的同学 可以百度加速github.com即可,有多种解决方案,加速github后，登录或者注册账号
+
+> 打开连接：https://github.com/52JDK/WxWeatherPush
+
+
+
+
 
 
 
 5. 服务器运行
+
+> 敬请期待~

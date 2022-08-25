@@ -5,6 +5,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ *
+ * @author 程序员小R
+ * @date 2022/8/24 16:17
+ */
+
 @Configuration
 public class WechatConfig {
 

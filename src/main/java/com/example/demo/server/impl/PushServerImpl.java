@@ -1,7 +1,6 @@
 package com.example.demo.server.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.config.WechatConfig;
 import com.example.demo.domain.MsgBody;
@@ -20,6 +19,12 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.List;
 
+
+/**
+ *
+ * @author 程序员小R
+ * @date 2022/8/24 16:17
+ */
 @Component
 @Slf4j
 public class PushServerImpl implements PushServer {

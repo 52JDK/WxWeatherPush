@@ -11,6 +11,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *
+ * @author 程序员小R
+ * @date 2022/8/24 16:17
+ */
 public class HttpUtil {
 //    /**
 //     * 向指定URL发送GET方法的请求

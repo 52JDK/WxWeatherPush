@@ -9,9 +9,8 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * 获取token定时任务
  *
- * @author 微信公众号：程序员小R
+ * @author 程序员小R
  * @date 2022/8/24 16:17
  */
 @Component

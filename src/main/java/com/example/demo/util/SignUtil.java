@@ -4,6 +4,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
+/**
+ *
+ * @author 程序员小R
+ * @date 2022/8/24 16:17
+ */
 public class SignUtil {
     // 与开发模式接口配置信息中的Token保持一致.
     private static String token = "abcdefghigklmnopqrstuvwsyz";
