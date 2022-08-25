@@ -43,6 +43,8 @@
 
 3. 本地运行
 
+>百度网盘：链接：https://pan.baidu.com/s/1GfUE8ojU_69Hl5K26t0tRw  提取码：qujf --来自百度网盘超级会员V4的分享
+
 - 将代码导入idea中，需要java本地的开发环境，b站：程序员小R，有视频安装教程
   
 - 然后编辑application.yml
@@ -71,6 +73,7 @@
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433374618-a4d4467d-6628-4bff-b82b-217413267d87.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
 
 (2) 导入项目：
+
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433397771-bfef6046-7f03-47f8-9531-4f0eee777dd3.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
 
