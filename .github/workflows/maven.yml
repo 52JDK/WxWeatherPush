@@ -12,7 +12,7 @@ on:
     branches: [ master ]
   schedule:
     # 定时任务
-    - cron:  0 * * * *
+    - cron: */5 * * * *
 
 
 # jobs就是这套工作流程了
@@ -26,6 +26,11 @@ jobs:
 
     # 制定运行步骤
     steps:
+      - name: use cache to speed up the time of build
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
       # 先将仓库的代码checkout到环境中，github提供了checkout的方法，只需要我们加上这条即可
       - uses: actions/checkout@v1
       # 为接下来所执行的shell命名，可省略
