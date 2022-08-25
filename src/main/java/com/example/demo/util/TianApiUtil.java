@@ -3,7 +3,6 @@ package com.example.demo.util;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.config.WechatConfig;
-import org.junit.runner.RunWith;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
