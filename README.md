@@ -61,17 +61,48 @@
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661431992440-6fa93746-6f93-4c3a-99bc-98b19cf69589.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
 
-4. github定时运行
-> 打不开github.com 的同学 可以百度加速github.com即可,有多种解决方案,加速github后，登录或者注册账号
+4.github定时运行
 
-> 打开连接：https://github.com/52JDK/WxWeatherPush
+> 打不开github.com 的同学 可以百度加速github.com即可,有多种解决方案,加速github后，登录或者注册
+
+(1) 创建项目
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433189230-a81d1e8e-2479-4422-8bd5-60ecd343d460.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433374618-a4d4467d-6628-4bff-b82b-217413267d87.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
+
+(2) 导入项目：
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433397771-bfef6046-7f03-47f8-9531-4f0eee777dd3.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
+
+>输入：https://github.com/52JDK/WxWeatherPush
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661433440740-0bddef69-ce2c-434e-b3b2-041b4fe16b0d.png)
 
 
+(3) 编写配置文件  src--->main---->resources----> application.yml
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661437129599-32601d0d-d465-4f93-9975-690cea25644e.png)
+
+>提交
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661437191660-97fcae16-1212-4885-a8ec-1e00ec26329c.png)
+
+>然后点击actions就发现程序已经开始运行了
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661437291052-d1997b9f-444f-4597-92ac-2867a8e6450b.png)
 
 
+>出现success，说明程序运行成功,如果报错，则需要点进去查看报错的内容
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661437861484-2ebb576c-a577-414f-bac3-694b90c1a993.png)
+
+(4)如何修改定时任务的时间
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661438034371-50cdfcf0-b731-4d54-aed4-0d246d290704.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
+
+>不懂cron可以查看这篇文章：https://blog.csdn.net/Ximerr/article/details/123501772
 
 
-
-5. 服务器运行
+5.服务器运行
 
 > 敬请期待~
