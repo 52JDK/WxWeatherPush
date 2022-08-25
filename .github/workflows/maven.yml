@@ -3,12 +3,16 @@ name: CI
 
 # on是指这套工作流程的trigger条件，即在push时触发
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    # 当对分支master进行push操作的时候，这个工作流就被触发了
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    #只运行特定分支master
+    branches: [ master ]
   schedule:
-    - cron: '0 8 * * *'
+    # 定时任务
+    - cron:  0 24 * * *
 
 
 # jobs就是这套工作流程了
