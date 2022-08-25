@@ -23,5 +23,44 @@
 
 ![模板消息](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661419599273-356e04aa-0fbb-453d-afcc-e057f008cd4f.png)
 
-**保留这个网站不要关闭，后续还有用**
-2. 
+**保留这个网站不要关闭，后续还有用** </br>
+
+2. 地址：[天行API申请](https://www.tianapi.com/)
+
+>用邮箱注册就ok
+
+![天行数据注册](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661421808060-2c37cc3a-c464-414f-b313-1cd236f316f0.png)
+
+> 回到首页---> 搜索API ---> 搜索彩虹屁---> 申请接口
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661422509222-951c5aed-1c37-43f3-950d-4c4d6e5a1623.png)
+
+> 点击在线测试，如下，参数值等会有用
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661422813164-bccbef72-183d-4e66-b008-d87c79eb7b30.png?x-oss-process=image%2Fresize%2Cw_1478%2Climit_0)
+
+**保留这个网站不要关闭，后续还有用** </br>
+
+3. 本地运行
+
+- 将代码导入idea中，需要java本地的开发环境，b站：程序员小R，有视频安装教程
+  
+- 然后编辑application.yml
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661423676458-05fc8237-a8b7-4dfc-b1f8-fc45e8ea3805.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
+
+- 测试代码 点击PushTest 文件，代码抛红说明有错误，需要先解决，一般来说是maven问题，刷新maven即可，建议先将微信号 填写自己的先进行测试 
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661423820969-179bfcfd-ef66-4e84-8b56-4201e8f25a62.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
+
+- 点击箭头按钮，Run push 执行
+
+![](https://cdn.nlark.com/yuque/0/2022/png/21710408/1661423929022-96046702-f64f-458a-9792-99588a9a1cc5.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
+
+- 观察控制台
+
+4. github定时运行
+
+
+
+5. 服务器运行
