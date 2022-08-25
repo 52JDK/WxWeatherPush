@@ -12,7 +12,7 @@ on:
     branches: [ master ]
   schedule:
     # 定时任务
-    - cron:  * * * * *
+    - cron:  50 2 * * *
 
 
 # jobs就是这套工作流程了
